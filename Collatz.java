@@ -9,21 +9,21 @@ public class Collatz {
 		
 
        if(args[1].equals("v")){
-		for(int i = 1; i < steps; i++){
+		for(int i = 1; i < steps+1; i++){
            int j = i;
 		   System.out.print(i);
 		do{
 			if(j% 2 == 0){
 				j = j/2;
-				System.out.print("," + j);
+				System.out.print(" " + j);
 				count++;
 			}else{
 				j = j*3 + 1;
-				System.out.print("," + j);
+				System.out.print(" " + j);
 				count++;
 			}
 		}while(j != 1);
-		System.out.print("(" + count + ")");
+		System.out.print(" (" + count + ")");
 		System.out.println("");
 	}
 	System.out.println("Every one of the first " + steps + " hailstone sequences reached 1.");
