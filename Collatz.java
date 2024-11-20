@@ -5,12 +5,12 @@ public class Collatz {
 		int steps = Integer.parseInt(args[0]);
 
 	   
-		int count = 1;
 		
 
        if(args[1].equals("v")){
-		for(int i = 1; i < steps+2; i++){
+		for(int i = 1; i < steps+1; i++){
            int j = i;
+		   int count = 1;
 		   System.out.print(i);
 		do{
 			if(j% 2 == 0){
@@ -28,8 +28,9 @@ public class Collatz {
 	}
 	System.out.println("Every one of the first " + steps + " hailstone sequences reached 1.");
 }else{
-	for(int i = 1; i < steps+2; i++){
+	for(int i = 1; i < steps+1; i++){
 		int j = i;
+		int count = 1;
 		do{
 			if(j% 2 == 0){
 				j = j/2;
